@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} Vendors Infro {% endblock %}
+{% block content%}
+    <h1>Vendor Name: {{vendor_one.vendor_name}}</h1>
+    <ul>
+        <li>Store Name: {{vendor_one.store_name}}</li>
+        <li>Phone Number: {{vendor_one.phone_number}}</li>
+        <li>Address: {{vendor_one.address}}</li>
+    </ul>
+{% endblock %}

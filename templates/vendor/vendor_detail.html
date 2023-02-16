@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} My store {% endblock %}
+{% block content%}
+<h1> 店家 : {{ vendor.vendor_name}} </h1>
+<ul>
+    <li>店名 : {{ vendor.store_name}}</li>
+    <li>電話 : {{ vendor.phone_number}}</li>
+    <li>地址 : {{ vendor.address}}</li>
+</ul>
+{% endblock %}
+
+{% comment %} 
+vendor_detail.html : 存取DetailView的方式比較特別，你可以使用 object or 小寫的 Model name - vendor 
+{% endcomment %}

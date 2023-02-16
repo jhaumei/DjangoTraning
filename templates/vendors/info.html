@@ -1,0 +1,28 @@
+{% extends "base.html" %}   {% comment %} 繼承base.html樣板 {% endcomment %}
+{% block title %} Vendors Infro {% endblock %}
+{% block content%}
+{% for vlist in vendor_list %}
+    <h1>Vendor Name: {{vlist.vendor_name}}</h1>
+    <p>
+      <a href={{vlist.get_absolute_url}}> More Details... </a>
+    </p>
+{% endfor %}
+{% endblock %}
+
+{% comment %} <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for vlist in vendor_list %}
+    <h1>Vendor Name: {{vlist.vendor_name}}</h1>
+    <ul>
+        <li>Store Name: {{vlist.store_name}}</li>
+        <li>Phone Number: {{vlist.phone_number}}</li>
+        <li>Address: {{vlist.address}}</li>
+    </ul>
+    {% endfor %}
+  </body>
+</html> {% endcomment %}
